@@ -29,10 +29,11 @@ From: ubuntu:18.04
   
   chmod +x /tmp/install_ausplot.r
   cd /tmp  
-  ./install_ausplot.r 
+  # ./install_ausplot.r 
 
   wget https://download1.rstudio.org/desktop/xenial/amd64/rstudio-1.2.1335-amd64.deb
+  apt install -y qtquick1-5-dev libqtwebkit-dev
   apt install -y ./rstudio-1.2.1335-amd64.deb
   ln -s /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libssl.so.1.0.0
   ln -s /usr/lib/x86_64-linux-gnu/libcrypto.so /usr/lib/x86_64-linux-gnu/libcrypto.so.1.0.0
-  
+
