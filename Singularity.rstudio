@@ -34,5 +34,4 @@ From: ubuntu:18.04
   wget https://download1.rstudio.org/desktop/xenial/amd64/rstudio-1.2.1335-amd64.deb
   apt install -y qml-module-qtquick-controls libqtwebkit-dev
   apt install -y ./rstudio-1.2.1335-amd64.deb
-  ln -s /usr/lib/x86_64-linux-gnu/libcrypto.so /usr/lib/x86_64-linux-gnu/libcrypto.so.1.0.0
 
