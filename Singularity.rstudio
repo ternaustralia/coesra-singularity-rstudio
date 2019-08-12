@@ -28,7 +28,7 @@ From: ubuntu:18.04
   apt install -y r-base r-base-dev libnss3 libasound2 qt5-default libcurl4-openssl-dev libxml2-dev libmagick++-dev git libgdal-dev libgeos-dev libprotobuf-dev libprotoc-dev libudunits2-dev libjq-dev
   cd /tmp  
   chmod +x install_dependencies.r
-  ./install_dependencies.r
+  ./install_dependencies.r > dependencies.log 2>&1
   # not sure why ausplot cannot be installed
   # chmod +x /tmp/install_ausplot.r
   #./install_ausplot.r 
