@@ -2,7 +2,7 @@
 
 install.packages(c('devtools'), dependencies = TRUE)
 ### for Ivan
-install.packages(c('rgdal' 'rgeos', 'animation'), dependencies = TRUE)
+install.packages(c('rgdal', 'rgeos', 'animation'), dependencies = TRUE)
 install.packages(c("RProtoBuf"), dependencies = TRUE)
 install.packages(c('V8'), dependencies = TRUE)
 install.packages(c('units', 'protolite', 'jqr'), dependencies = TRUE)
