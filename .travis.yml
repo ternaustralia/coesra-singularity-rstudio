@@ -16,9 +16,9 @@ matrix:
   include:
   - python: '3.5'
 before_install:
-- sudo apt install -y libarchive-dev squashfs-tools
+- sudo apt install -y libarchive-dev squashfs-tools 
 - sudo chmod u+x .travis/*.sh
-- "/bin/bash .travis/setup.sh"
+- "/bin/bash .travis/setup.sh > /dev/null 2>&1"
 install: pip install --upgrade pip
 script: 
   - "/bin/bash .travis/build-and-publish.sh rstudio"
