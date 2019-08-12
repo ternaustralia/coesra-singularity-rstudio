@@ -9,8 +9,8 @@ From: ubuntu:18.04
   exec /usr/bin/rstudio "$@"
 
 %files
- install_ausplot.r /tmp
-
+ # install_ausplot.r /tmp
+ install_dependencies.r /tmp
 %environment
 
 %post
@@ -25,11 +25,13 @@ From: ubuntu:18.04
   apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
   add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/'
   apt update -y
-  apt install -y libssl1.0-dev r-base r-base-dev libnss3 libasound2 qt5-default
-  
-  chmod +x /tmp/install_ausplot.r
+  apt install -y libssl1.0-dev r-base r-base-dev libnss3 libasound2 qt5-default libcurl4-openssl-dev libxml2-dev libmagick++-dev git libgdal-dev libgeos-dev libprotobuf-dev libprotoc-dev libudunits2-dev libjq-dev
   cd /tmp  
-  # ./install_ausplot.r 
+  chmod +x install_dependencies.r
+  ./install_dependencies.r
+  # not sure why ausplot cannot be installed
+  # chmod +x /tmp/install_ausplot.r
+  #./install_ausplot.r 
 
   wget https://download1.rstudio.org/desktop/xenial/amd64/rstudio-1.2.1335-amd64.deb
   apt install -y qml-module-qtquick-controls libqtwebkit-dev
