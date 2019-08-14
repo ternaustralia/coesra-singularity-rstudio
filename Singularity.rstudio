@@ -1,5 +1,5 @@
 BootStrap: docker
-From: ubuntu:18.04
+From: rstudio/r-base:3.5.3-bionic
 
 
 %startscript
@@ -25,16 +25,18 @@ From: ubuntu:18.04
   apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
   add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/'
   apt update -y
-  apt install -y r-base r-base-dev libnss3 libasound2 qt5-default libcurl4-openssl-dev libxml2-dev libmagick++-dev git libgdal-dev libgeos-dev libprotobuf-dev libprotoc-dev libudunits2-dev libjq-dev > /dev/null 2>&1
+  apt upgrade -y
+  # apt install -y r-base r-base-dev
+  apt install -y libnss3 libasound2 qt5-default libcurl4-openssl-dev libxml2-dev libmagick++-dev git libgdal-dev libgeos-dev libprotobuf-dev libprotoc-dev libudunits2-dev libjq-dev > /dev/null 2>&1
   cd /tmp  
   chmod +x install_dependencies.r
-  
+
   ./install_dependencies.r > depedencies.log
   # not sure why ausplot cannot be installed
   # chmod +x /tmp/install_ausplot.r
   #./install_ausplot.r 
 
-  wget https://download1.rstudio.org/desktop/xenial/amd64/rstudio-1.2.1335-amd64.deb
-  apt install -y libssl1.0-dev qml-module-qtquick-controls libqtwebkit-dev
-  apt install -y ./rstudio-1.2.1335-amd64.deb
+  # wget https://download1.rstudio.org/desktop/xenial/amd64/rstudio-1.2.1335-amd64.deb
+  # apt install -y libssl1.0-dev qml-module-qtquick-controls libqtwebkit-dev
+  # apt install -y ./rstudio-1.2.1335-amd64.deb
 
