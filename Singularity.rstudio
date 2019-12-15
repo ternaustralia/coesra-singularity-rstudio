@@ -34,9 +34,8 @@ From: rstudio/r-base:3.5.3-bionic
   ./install_dependencies.r > depedencies.log
   # not sure why ausplot cannot be installed
   # chmod +x /tmp/install_ausplot.r
-  #./install_ausplot.r 
+  #./install_ausplot.r
 
-  # wget https://download1.rstudio.org/desktop/xenial/amd64/rstudio-1.2.1335-amd64.deb
+  wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5019-amd64.deb
   # apt install -y libssl1.0-dev qml-module-qtquick-controls libqtwebkit-dev
-  # apt install -y ./rstudio-1.2.1335-amd64.deb
-
+  apt install -y ./rstudio-1.2.5019-amd64.deb
