@@ -29,7 +29,7 @@ From: rstudio/r-base:3.5.3-bionic
   apt update -y
   apt upgrade -y
   # apt install -y r-base r-base-dev
-  apt install -y libnss3 libasound2 qt5-default libcurl4-openssl-dev libxml2-dev libmagick++-dev git libgdal-dev libgeos-dev libprotobuf-dev libprotoc-dev protobuf-compiler libudunits2-dev libjq-dev libqpdf-dev libpoppler-cpp-dev libssl-dev openjdk-11-jdk libv8-dev > /dev/null 2>&1
+  apt install -y libnss3 libasound2 qt5-default libcurl4-openssl-dev libxml2-dev libmagick++-dev git libgdal-dev libgeos-dev libprotobuf-dev libprotoc-dev protobuf-compiler libudunits2-dev libjq-dev libqpdf-dev libpoppler-cpp-dev libssl-dev libssh2-1-dev openjdk-11-jdk libv8-dev > /dev/null 2>&1
   cd /tmp
   chmod +x install_dependencies.r
 
