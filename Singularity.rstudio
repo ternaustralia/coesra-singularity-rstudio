@@ -12,6 +12,8 @@ From: rstudio/r-base:3.5.3-bionic
  # install_ausplot.r /tmp
  install_dependencies.r /tmp
 %environment
+  LANG=C.UTF-8
+  export LANG
 
 %post
   apt update -y
