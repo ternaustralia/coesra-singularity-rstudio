@@ -22,8 +22,8 @@ RUN chmod +x /tmp/install_dependencies.r
 
 RUN Rscript /tmp/install_dependencies.r > depedencies.log
 
-RUN wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5019-amd64.deb
+RUN wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-pro-1.4.1717-3-amd64.deb
 
-RUN apt install -y ./rstudio-1.2.5019-amd64.deb
+RUN apt install -y ./rstudio-pro-1.4.1717-3-amd64.deb
 
 ENTRYPOINT exec /usr/bin/rstudio "$@"
