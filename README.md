@@ -8,7 +8,7 @@ The main idea of this repository is to build the `RStudio` application in a dock
 
 ### Build docker image
 ```
-docker build . -t rstudio:1.4
+docker build . -t rstudio:2022.02.2-485
 ```
 
 ### Docker2Singularity
@@ -20,6 +20,6 @@ docker run \
     -v $HOME/<OUTPUT_PATH>:/output \
     --privileged -t --rm \
     singularityware/docker2singularity \
-    --name <OUTPUT_NAME> rstudio:1.4
+    --name <OUTPUT_NAME> rstudio:2022.02.2-485
 ```
 

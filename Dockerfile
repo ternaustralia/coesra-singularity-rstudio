@@ -1,4 +1,4 @@
-FROM rstudio/r-base:devel-bionic
+FROM --platform=linux/amd64  rstudio/r-base:devel-bionic
 
 COPY install_dependencies.r /tmp/
 
