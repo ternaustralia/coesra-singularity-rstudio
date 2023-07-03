@@ -17,9 +17,9 @@ install.packages(c('abind', 'askpass', 'assertthat', 'automap', 'backports',
 				'bookdown', 'boot', 'brew', 'callr', 'car', 'carData', 'cellranger', 'chron',
 				'class', 'classInt', 'cli', 'clipr', 'clisymbols', 'cloudstoR', 'cluster', 'codetools',
 				'colorspace', 'commonmark', 'crayon', 'crosstalk', 'curl',
-				'data.table', 'datasets', 'DBI', 'desc', 'digest', 'dlnm', 'dotCall64',
+				'data.table', 'DBI', 'desc', 'digest', 'dlnm', 'dotCall64',
 				'dplyr', 'DT', 'e1071', 'ellipsis', 'evaluate', 'exactextractr','fansi', 'fgui', 'fields',
-				'FNN', 'forcats', 'foreign', 'fs', 'geor', 'ggmap', 'ggplot2', 'gh', 'git2r', 'glue',
+				'FNN', 'forcats', 'foreign', 'fs', 'geoR', 'ggmap', 'ggplot2', 'gh', 'git2r', 'glue',
 				'goftest', 'gridExtra', 'gstat', 'gsubfn',
 				'gtable', 'haven', 'highr', 'HistData', 'Hmisc', 'hms', 'htmltools',
 				'htmlwidgets', 'httpuv', 'httr', 'igraph', 'ini', 'intervals', 'jsonlite',
@@ -38,25 +38,27 @@ install.packages(c('abind', 'askpass', 'assertthat', 'automap', 'backports',
 				'rstudioapi', 'scales', 'season', 'sessioninfo', 'sf',
 				'sourcetools', 'sp', 'spacetime', 'spam', 'SparseM', 'spatial', 'SPEI',
 				'sqldf', 'stringi', 'stringr', 'survival',
-				'swirl', 'swishdbtools', 'sys', 'tarchetypes', 'targets', 'terra', 'testthat', 'tibble', 'tidyselect',
-				'tinytex', 'translations', 'units', 'usethis', 'utf8',
-				'vctrs', 'velox', 'visNetwork' , 'viridisLite', 'whisker', 'withr', 'xfun', 'xml2',
+				'swirl', 'sys', 'tarchetypes', 'targets', 'terra', 'testthat', 'tibble', 'tidyselect',
+				'tinytex', 'units', 'usethis', 'utf8',
+				'vctrs', 'visNetwork' , 'viridisLite', 'whisker', 'withr', 'xfun', 'xml2',
 				'xopen', 'xtable', 'xts', 'yaml', 'zeallot', 'zip', 'zoo'),
 				 Ncpus=3, repos="https://cran.csiro.au")
 
+### 'RcppEigen' was left out, it is not working
+### Exclude 'translations' package as it is not available anymore?
 
 install.packages(c('R2jags', 'gamm4', 'emmeans', 'dismo', 'ausplotsR', 'ozmaps', 'mgvc', 'tidyverse', 'lubridate',
 				'plantecophys', 'ncdf4', 'soundecology', 'seewave', 'bioacoustics', 'warbleR', 'hazer', 'phenocamr',
-				'monitoR' 'landsat', 'fanplot', 'usethis', 'xlsx'),
+				'monitoR' 'landsat', 'fanplot', 'xlsx'),
 				 Ncpus=3, repos="https://cran.csiro.au")
-
-### 'RcppEigen' was left out, it is not working
 
 # Install packages from CRAN archieves
 devtools::install_version("slga", version="1.2.0", repos="https://cran.csiro.au")
 devtools::install_version("galah", version="1.5.2", repos="https://cran.csiro.au")
+devtools::install_version("velox", version="0.2.0", repos="https://cran.csiro.au")
 
 # Install packages from github:
 devtools::install_github("traitecoevo/austraits", dependencies=TRUE, upgrade="always")
 devtools::install_github("ilyamaclean/microclima", dependencies=TRUE, upgrade="always")
 devtools::install_github("mrke/NicheMapR", dependencies=TRUE, upgrade="always")
+devtools::install_github("swish-climate-impact-assessment/swishdbtools", dependencies=TRUE, upgrade="always")
