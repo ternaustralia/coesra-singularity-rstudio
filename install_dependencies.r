@@ -49,7 +49,7 @@ install.packages(c('abind', 'askpass', 'assertthat', 'automap', 'backports',
 
 install.packages(c('R2jags', 'gamm4', 'emmeans', 'dismo', 'ausplotsR', 'ozmaps', 'mgvc', 'tidyverse', 'lubridate',
 				'plantecophys', 'ncdf4', 'soundecology', 'seewave', 'bioacoustics', 'warbleR', 'hazer', 'phenocamr',
-				'monitoR', 'landsat', 'fanplot', 'xlsx'),
+				'monitoR', 'landsat', 'fanplot', 'geojsonR', 'xlsx'),
 				 Ncpus=3, repos="https://cran.csiro.au")
 
 # Install packages from CRAN archieves
