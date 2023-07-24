@@ -32,8 +32,8 @@ RUN chmod +x /tmp/install_dependencies.r
 
 RUN Rscript /tmp/install_dependencies.r > depedencies.log
 
-RUN wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-2022.02.2-485-amd64.deb
+RUN wget https://download1.rstudio.org/electron/focal/amd64/rstudio-2023.06.1-524-amd64.deb
 
-RUN apt install -y ./rstudio-2022.02.2-485-amd64.deb
+RUN apt install -y ./rstudio-2023.06.1-524-amd64.deb
 
 ENTRYPOINT exec /usr/bin/rstudio "$@"
