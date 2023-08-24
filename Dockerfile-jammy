@@ -1,0 +1,21 @@
+FROM ubuntu:jammy
+
+ENV DEBIAN_FRONTEND noninteractive
+ENV DEBCONF_NONINTERACTIVE_SEEN true
+
+RUN apt update -qq
+RUN apt install -y --no-install-recommends software-properties-common dirmngr wget
+RUN wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
+RUN add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
+RUN apt install -y --no-install-recommends r-base
+
+RUN cd /tmp/ 
+RUN wget https://download1.rstudio.org/electron/jammy/amd64/rstudio-2023.06.1-524-amd64.deb
+RUN apt install -y ./rstudio-2023.06.1-524-amd64.deb
+
+RUN apt install -y libssl-dev libclang-dev libxkbcommon-x11-0 libpq5
+RUN apt --fix-broken install
+RUN apt install -y libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libgtk-3-0 libgbm1 libasound2 libx11-xcb1
+
+
+ENTRYPOINT exec /usr/bin/rstudio "$@"
