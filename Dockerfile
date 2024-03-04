@@ -18,7 +18,7 @@ RUN  apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD
   apt upgrade -y && \
   apt install -y libnss3 libasound2 qt5-default libcurl4-openssl-dev libxml2-dev libmagick++-dev git libgdal-dev libgeos-dev libprotobuf-dev libprotoc-dev protobuf-compiler libudunits2-dev libjq-dev libqpdf-dev libpoppler-cpp-dev libssl-dev libssh2-1-dev openjdk-11-jdk libv8-dev libsodium-dev > /dev/null 2>&1
 
-RUN apt install -y cmake g++ make
+RUN apt install -y cmake g++ make ssh-askpass ssh-askpass-gnome
 
 RUN apt install -y libgmp3-dev libfribidi-dev libharfbuzz-dev fftw3-dev jags
 
