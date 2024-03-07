@@ -20,7 +20,7 @@ RUN  apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD
 
 RUN apt install -y cmake g++ make ssh-askpass ssh-askpass-gnome
 
-RUN apt install -y libgmp3-dev libfribidi-dev libharfbuzz-dev fftw3-dev jags
+RUN apt install -y libgmp3-dev libfribidi-dev libharfbuzz-dev fftw3-dev libglpk-dev jags
 
 # Configure Java for R; required for rJava
 ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
@@ -32,8 +32,8 @@ RUN chmod +x /tmp/install_dependencies.r
 
 RUN Rscript /tmp/install_dependencies.r > depedencies.log
 
-RUN wget https://download1.rstudio.org/electron/focal/amd64/rstudio-2023.06.1-524-amd64.deb
+RUN wget https://download1.rstudio.org/electron/focal/amd64/rstudio-2023.12.1-402-amd64.deb
 
-RUN apt install -y ./rstudio-2023.06.1-524-amd64.deb
+RUN apt install -y ./rstudio-2023.12.1-402-amd64.deb
 
 ENTRYPOINT exec /usr/bin/rstudio "$@"
