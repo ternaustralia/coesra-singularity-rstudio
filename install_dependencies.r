@@ -5,7 +5,8 @@ install.packages(c('devtools'), dependencies=TRUE, repos="https://cran.csiro.au"
 install.packages(c('animation', 'RProtoBuf', 'V8'), dependencies=TRUE, Ncpus=3, repos="https://cran.csiro.au")
 install.packages(c('protolite', 'jqr'), dependencies =TRUE, Ncpus=3, repos = "https://cran.csiro.au")
 install.packages("rstan", repos="https://cran.csiro.au", dependencies=TRUE)
-install.packages(c('goeveg', 'vegan', 'simba', 'jose'), Ncpus=3, repos="https://cran.csiro.au")
+install.packages(c('goeveg', 'vegan', 'jose'), Ncpus=3, repos="https://cran.csiro.au")
+install.packages('https://cran.r-project.org/src/contrib/Archive/simba/simba_0.3-5.tar.gz')
 
 # pre install some pkgs which are not correctly resolved as dependencies
 #  - shiny for htmlwidgets
